@@ -6,11 +6,13 @@ let arr = [
   { id: 3, name: "karen", age: "19", marks: 35 },
 ];
 
+
 function PrintStudentswithMap() {
-  const studentsOver50 = arr
+  arr
     .filter((student) => student.marks > 50)
-    .map((student) => console.log(student));
+    .forEach((student) => console.log(student));
 }
+
 
 function PrintStudentsbyForEach() {
   arr.forEach((student) => {
@@ -23,7 +25,7 @@ function PrintStudentsbyForEach() {
 function addData() {
   const newStudent = { id: 4, name: "susan", age: "20", marks: 45 };
   arr.push(newStudent);
-  console.log(newStudent);
+  console.log(arr);
 }
 
 function removeFailedStudent() {
@@ -37,7 +39,8 @@ function concatenateArray() {
     { id: arr.length + 2, name: "Afin", age: "24", marks: 55 },
     { id: arr.length + 3, name: "Ottakam", age: "21", marks: 61 },
   ];
-
-  const concatenatedArray = arr.concat(newArray);
-  console.log(concatenatedArray);
+ 
+  arr = arr.concat(newArray);
+  console.log(arr);
+  
 }
